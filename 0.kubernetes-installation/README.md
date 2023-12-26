@@ -72,7 +72,8 @@ export KUBECONFIG=~nachiketh/.kube/config
 ```bash
 sudo swapoff -a
 sudo sed -i '/ swap / s/^/#/' /etc/fstab
-
+sudo hostnamectl set-hostname "workernode-3"
+exec bash
 
 cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
 overlay
